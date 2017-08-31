@@ -10,8 +10,32 @@ class Persona {
           echo "Soy ".$this->nombre." y estoy hablando ".",";
 
      }
+     public function acariciar($perrito)
+
+     {
+          
+            $perrito->moverCola();
+     }
 
 }
+
+class Perro {
+     
+     public $nombre;
+
+     public function moverCola()
+
+     {
+          echo "Muevo la cola";   
+
+     }
+
+
+} 
+$a = new Perro();
+$a->nombre = "Rufo";
+$a->moverCola();
+
 
 $p = new Persona();
 $p->nombre = "Micaela";
@@ -26,4 +50,9 @@ echo "Hola ".$p1->nombre."<br>";
 
 $p->hablar();
 $p1->hablar();
+$p->acariciar($Perro);
+
+
+
+
 ?>
